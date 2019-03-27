@@ -1,5 +1,3 @@
-#lang planet neil/sicp
-
 (define (count-change amount) (cc amount 5))
 
 (define (cc amount kinds-of-coins)
@@ -52,3 +50,11 @@
 (pascal-triangle 3 3)
 (pascal-triangle 3 2)
 (pascal-triangle 4 2)
+
+;; Euclid's Algorithm
+;; GDB(a, b) = GDB(b, r)
+;; r is the remainder when a is devided by b
+(define (gdb a b)
+  (if (= b 0)
+    a
+    (gdb b (remainder a b))))
